@@ -1,0 +1,41 @@
+.promocionContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* 2 columnas iguales */
+    gap: 20px;
+    /* Espacio entre los botones */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    padding: 20px;
+    /* Espacio alrededor de los botones */
+    
+    justify-content: center;
+}
+
+.botonPromocion {
+    width: 100vh;
+    height: 200px;
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Asegura que no haya borde */
+    margin: 0; /* Elimina el margen del h2 */
+    color: inherit; /* Hereda el color del contenedor */
+    cursor: pointer;
+}
+
+.botonPromocion:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}

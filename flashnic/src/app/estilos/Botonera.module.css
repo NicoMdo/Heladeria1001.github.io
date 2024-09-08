@@ -1,0 +1,140 @@
+.containerBotonera {
+    align-self: start;
+}
+
+.botoneraContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan */
+    gap: 20px; /* Espacio entre los botones */
+    padding: 20px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-content: flex-start; /* Alinea el contenido hacia arriba */
+}
+
+.boton {
+    flex: 1 1 500px; /* Crece y se reduce según el espacio disponible, pero mínimo 500px */
+    height: 200px;
+    background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(59, 32, 32);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    flex-direction: column; /* Apila el contenido verticalmente */
+}
+
+.boton:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.gustosContainer {
+    display: none; /* Oculta la cartilla por defecto */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite desplazamiento si el contenido es grande */
+    display: flex; /* Muestra la cartilla cuando está activa */
+    flex-direction: column; /* Apila el contenido verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.gustosContainer.active {
+    display: flex; /* Muestra la cartilla cuando está activa */
+}
+
+.gustosContainer h2 {
+    margin-bottom: 20px;
+}
+
+.gustosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Ajusta las columnas según el tamaño del contenedor */
+    gap: 10px;
+    width: 100%;
+}
+
+.gustoLabel {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    cursor: pointer;
+    width: 100px; /* Ajusta el ancho según sea necesario */
+}
+
+.gustoCheckbox {
+    display: none; /* Oculta la casilla de verificación */
+}
+
+.cardGusto {
+    width: 100px;
+    height: 100px;
+    background-image: url('/images/D_NQ_NP_636628-MLA74102137585_012024-O.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.cardGusto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.gustoCheckbox:checked + .cardGusto {
+    border: 2px solid lime;
+    box-shadow: 0 0 10px lime;
+}
+
+.gustoText {
+    margin-top: 8px; /* Espacio entre la imagen y el texto */
+    font-size: 0.9rem; /* Tamaño de fuente ajustable */
+    font-weight: bold; /* Opcional: para hacer el texto más grueso */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+/* Estilos para los botones de aplicar y volver */
+.botonesAccion {
+    position: fixed; /* Fija la posición en la pantalla */
+    right: 20px; /* Mueve los botones 20px desde el borde derecho */
+    bottom: 20px; /* Mueve los botones 20px desde el borde inferior */
+    display: flex;
+    gap: 20px;
+    z-index: 1000; /* Asegura que los botones estén encima de otros elementos */
+}
+
+.botonVolver, .botonAplicar {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #00CDAC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botonVolver:hover {
+    background-color: #029C95;
+}
+
+.botonAplicar:hover {
+    background-color: #029C95;
+}

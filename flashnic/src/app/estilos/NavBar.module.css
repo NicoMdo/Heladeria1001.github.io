@@ -1,0 +1,19 @@
+.navBarContainer {
+    position: fixed;
+    /* Mantén el navbar en la parte superior de la página */
+    top: 0;
+    /* Alinea el navbar en la parte superior */
+    left: 0;
+    /* Alinea el navbar a la izquierda */
+    width: 100%;
+    height: 60px; /* Establece la altura real del navbar */
+    /* Ocupa todo el ancho de la ventana */
+    z-index: 1000;
+    /* Asegúrate de que esté por encima de otras secciones */
+}
+
+
+.mainContent {
+    margin-top: 60px;
+    /* Ajusta el valor según la altura de tu navbar */
+}

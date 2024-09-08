@@ -1,0 +1,195 @@
+.detallesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 94%; /* Ajusta la altura para compensar la altura del navbar */
+    background-color: #f8f9fA;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 56px; /* Ajusta según la altura del navbar */
+    left: 0;
+    overflow-y: auto;
+  }
+  
+
+/* Sección de Detalles del Cliente (arriba) */
+.detallesCliente {
+    flex-shrink: 0;
+}
+
+/* Separador entre las dos secciones */
+.divider {
+    height: 2px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+/* Sección de Detalles del Pedido (abajo) */
+.detallesPedido {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Contenedor con scroll para la tabla */
+.tablaPedidosContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* Tabla de pedidos */
+.pedidosTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pedidosTable th,
+.pedidosTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+    /* Alinea verticalmente al centro */
+}
+
+.pedidosTable th {
+    background-color: #f4f4f4;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Asegura que las celdas no permitan que los botones se salgan */
+.pedidosTable td {
+    font-size: 16px;
+    color: #555;
+    padding: 8px;
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Posicionamiento de los botones en la celda */
+.table-cell-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* Evita que los botones se envuelvan */
+    gap: 5px;
+}
+
+/* Lista de productos */
+.gustosList {
+    margin-left: 50px;
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+/* Gusto item */
+.gustoItem {
+    margin-bottom: 8px;
+}
+
+/* Barra de Total Gastado siempre visible */
+.totalBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 12px;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #43a047;
+    text-align: right;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.totalText {
+    margin-left: 10px; 
+}
+
+.totalAmount {
+    margin-right: 20px;
+    text-align: right;
+    flex-grow: 1;
+}
+
+.etiqueta {
+    color: #FFA500;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+.etiquetaInput {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para los botones Modificar y Borrar */
+.botonAccion {
+    padding: 0.5em; /* Reduce el padding */
+    font-size: 0.9em; /* Reduce ligeramente el tamaño de la fuente */
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+    min-width: 35px; /* Asegura que los botones tengan un ancho mínimo */
+    height: 35px; /* Asegura que los botones tengan un tamaño fijo */
+}
+
+.botonAccion:hover {
+    background-color: #0056b3;
+}
+
+.botonAccion:last-child {
+    background-color: #dc3545;
+}
+
+.botonAccion:last-child:hover {
+    background-color: #c82333;
+}
+
+/* Alternar filas en la tabla */
+.pedidosTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.pedidosTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    
+    .pedidosTable td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
